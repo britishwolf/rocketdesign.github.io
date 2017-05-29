@@ -6,6 +6,36 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />	
 	<link href="css/font-awesome.min.css" rel="stylesheet"/>
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/smoothness/jquery-ui.css">
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+
+<script type="text/javascript" src="kdkdkdk/javascripts/jquery-1.9.1.min.js"></script>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+    </script>
+
 </head>
 <body>
     <header>
@@ -18,7 +48,7 @@
                      <li><a href="#">Skills</a></li>
                      <li><a href="#">Portfolio</a></li>
                      <li><a href="#">Our Team</a></li>
-                     <li><a href="#">Contact</a></li>
+                     <li><a href="#sociallinks">Contact</a></li>
                  </ul>
              </nav>
          </div>
@@ -95,6 +125,7 @@
 <!---End Smiley Face--->
     <footer>
         <ul class="social">
+            <div id="sociallinks"></div>
             <li><a href="https://www.facebook.com/oliver.denness" target="_blank"><i class="fa fa-facebook"></i></a></li>
             <li><a href="https://plus.google.com/u/0/111386854846842253242" target="_blank"><i class="fa fa-google-plus"></i></a></li>
             <li><a href="https://twitter.com/OliePlayz" target="_blank"><i class="fa fa-twitter"></i></a></li>
